@@ -6,7 +6,7 @@ our $VERSION = '0.01';
 use base 'Module::Install::Base';
 use Inline::Module;
 
-use XXX;
+# use XXX;
 
 sub inline {
     my ($self, %args) = @_;

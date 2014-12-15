@@ -31,7 +31,7 @@ BEGIN {
 	# This is not enforced yet, but will be some time in the next few
 	# releases once we can make sure it won't clash with custom
 	# Module::Install extensions.
-	$VERSION = '1.14';
+	$VERSION = '1.10';
 
 	# Storage for the pseudo-singleton
 	$MAIN    = undef;
@@ -378,7 +378,6 @@ eval( $] >= 5.006 ? <<'END_NEW' : <<'END_OLD' ); die $@ if $@;
 sub _read {
 	local *FH;
 	open( FH, '<', $_[0] ) or die "open($_[0]): $!";
-	binmode FH;
 	my $string = do { local $/; <FH> };
 	close FH or die "close($_[0]): $!";
 	return $string;
@@ -387,7 +386,6 @@ END_NEW
 sub _read {
 	local *FH;
 	open( FH, "< $_[0]"  ) or die "open($_[0]): $!";
-	binmode FH;
 	my $string = do { local $/; <FH> };
 	close FH or die "close($_[0]): $!";
 	return $string;
@@ -418,7 +416,6 @@ eval( $] >= 5.006 ? <<'END_NEW' : <<'END_OLD' ); die $@ if $@;
 sub _write {
 	local *FH;
 	open( FH, '>', $_[0] ) or die "open($_[0]): $!";
-	binmode FH;
 	foreach ( 1 .. $#_ ) {
 		print FH $_[$_] or die "print($_[0]): $!";
 	}
@@ -428,7 +425,6 @@ END_NEW
 sub _write {
 	local *FH;
 	open( FH, "> $_[0]"  ) or die "open($_[0]): $!";
-	binmode FH;
 	foreach ( 1 .. $#_ ) {
 		print FH $_[$_] or die "print($_[0]): $!";
 	}
@@ -471,4 +467,7 @@ sub _CLASS {
 
 1;
 
-# Copyright 2008 - 2012 Adam Kennedy.
+
+__END__
+
+#line 485
