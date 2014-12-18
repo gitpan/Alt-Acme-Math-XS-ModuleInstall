@@ -1,4 +1,3 @@
-#line 1
 package Inline::denter;
 
 use strict;

@@ -1,4 +1,3 @@
-#line 1
 use strict; use warnings;
 package Inline;
 
