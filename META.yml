@@ -1,7 +1,7 @@
 ---
-abstract: ~
+abstract: 'Math is HARD (faster!)'
 author:
-  - =over
+  - 'Ingy döt Net <ingy@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
 configure_requires:
@@ -23,4 +23,4 @@ requires:
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.0.3
+version: 0.0.4

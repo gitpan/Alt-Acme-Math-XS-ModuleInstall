@@ -1,7 +1,7 @@
 #line 1
 use strict; use warnings;
 package Module::Install::InlineModule;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use base 'Module::Install::Base';
 use Inline::Module();
