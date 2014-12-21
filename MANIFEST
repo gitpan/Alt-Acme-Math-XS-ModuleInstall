@@ -1,4 +1,3 @@
-.travis.yml
 Changes
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
@@ -19,7 +18,6 @@ MANIFEST			This list of files
 META.yml
 README
 t/test.t
-lib/Acme/Math/XS/Inline.pm
 inc/Acme/Math/XS/Inline.pm
 inc/Inline.pm
 inc/Inline/denter.pm
